@@ -1,18 +1,19 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import { Layout } from "../../components/layout/Layout";
 import { Card, Form, Row, Space, Typography } from "antd";
 import CustomInput from "../../components/custom-input/CustomInput";
 import { PassInput } from "../../components/password-input/PassInput";
-import {Link, Navigate} from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { Paths } from "../../paths/Paths";
 import { CustomButton } from "../../components/custom-button/CustomButton";
-import {useDispatch, useSelector} from "react-redux";
-import {fetchAuth, selectIsAuth} from "../../app/slices/authSlice";
-import {AppDispatch} from "../../app/store";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAuth, selectIsAuth } from "../../app/slices/authSlice";
+import { AppDispatch } from "../../app/store";
 
 const Login = () => {
     const dispatch: AppDispatch = useDispatch()
     const isAuth = useSelector(selectIsAuth)
+
     const onFinish = async (values: any) => {
         // @ts-ignore
         const data = await dispatch(fetchAuth(values))
@@ -23,7 +24,6 @@ const Login = () => {
             window.localStorage.setItem('token', data.payload.token)
         }
     }
-
 
     if(isAuth) {
         return <Navigate to={Paths.home} />

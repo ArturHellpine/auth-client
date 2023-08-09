@@ -1,12 +1,12 @@
 import React, { FC } from "react";
-import {Button, Layout, Space, Typography} from "antd";
+import { Button, Layout, Space, Typography } from "antd";
 import { LoginOutlined, UserOutlined, LogoutOutlined } from "@ant-design/icons";
 import styles from "./header.module.css";
 import { Link } from "react-router-dom";
 import { Paths } from "../../paths/Paths";
-import {useDispatch, useSelector} from "react-redux";
-import {logout, selectIsAuth} from "../../app/slices/authSlice";
-import {AppDispatch} from "../../app/store";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, selectIsAuth } from "../../app/slices/authSlice";
+import { AppDispatch } from "../../app/store";
 
 const Header: FC = () => {
     const isAuth = useSelector(selectIsAuth)

@@ -4,11 +4,14 @@ import { Card, Form, Row, Space, Typography } from "antd";
 import CustomInput from "../../components/custom-input/CustomInput";
 import { PassInput } from "../../components/password-input/PassInput";
 import { CustomButton } from "../../components/custom-button/CustomButton";
-import {Link, Navigate} from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { Paths } from "../../paths/Paths";
-import {AppDispatch} from "../../app/store";
-import {useDispatch, useSelector} from "react-redux";
-import {fetchAuth, fetchRegister, selectIsAuth} from "../../app/slices/authSlice";
+import { AppDispatch } from "../../app/store";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  fetchRegister,
+  selectIsAuth,
+} from "../../app/slices/authSlice";
 
 const Register = () => {
     const dispatch: AppDispatch = useDispatch()

@@ -1,4 +1,4 @@
-import React, {FC} from 'react'
+import React, { FC } from 'react'
 import { NamePath } from 'antd/es/form/interface'
 import { Form, Input } from 'antd'
 

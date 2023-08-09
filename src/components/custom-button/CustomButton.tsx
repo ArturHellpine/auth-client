@@ -1,5 +1,5 @@
-import React, {FC} from 'react';
-import {Button, Form} from "antd";
+import React, { FC } from "react";
+import { Button, Form } from "antd";
 
 interface CustomButtonProps {
     children: React.ReactNode

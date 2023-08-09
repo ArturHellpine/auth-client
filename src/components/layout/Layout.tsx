@@ -1,4 +1,4 @@
-import React, {FC, useEffect} from 'react'
+import React, { FC } from 'react'
 import classes from './Layout.module.css'
 import { Layout as AntLayout } from 'antd'
 import  Header  from '../header/Header'
