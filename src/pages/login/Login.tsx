@@ -17,6 +17,7 @@ const Login = () => {
     const onFinish = async (values: any) => {
         // @ts-ignore
         const data = await dispatch(fetchAuth(values))
+
         if(!data.payload) {
            return alert('Не вдалось авторизуватись')
         }

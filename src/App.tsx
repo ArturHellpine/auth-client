@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import { ConfigProvider, theme } from "antd";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router";

@@ -9,6 +9,7 @@ const Home = () => {
 
     return (
         <Layout>
+            {userData && `Ви увійшли як ${userData?.firstName} ${userData?.lastName}`}
             <Row align='middle' justify='center'>
                 <Space direction='vertical' size='large'>
                     {userData?.firstName}
